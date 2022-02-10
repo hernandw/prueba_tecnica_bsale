@@ -5,7 +5,7 @@ const path = require('path');
 const morgan = require('morgan');
 const mysql = require('mysql');
 const myConnection = require('express-myconnection');
-const customerRoutes = require('./routes/customer');
+const customerRoutes = require('./routes/product');
 
 
 
@@ -16,6 +16,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 //middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false}));
 app.use(morgan('dev'));// ver las consultas en la consola
 app.use(myConnection(mysql, {
     host: process.env.DB_HOST,
