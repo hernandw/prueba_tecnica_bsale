@@ -44,3 +44,14 @@ Nodemon: permite ejecutar los cambios sin necesidad de reiniciar el servidor man
 ```
 npm i nodemon -D
 ```
+
+Se utilizó la metodologia MVC (Modelo Vista Conytrolador)
+
+El backend se guardó en la carpeta src
+
+Las vistas se hicieron con el motor de plantilla EJS.
+
+Los modelos no se realizaron porque se conectó  a la BBDD de datos proporcionada.
+
+Se hizo deploy en heroku shoppingbsale.herokuapp.com/
+Se actualizó en repositorio de github: https://github.com/hernandw/prueba_tecnica_bsale

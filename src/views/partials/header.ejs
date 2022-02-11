@@ -6,55 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7a47e06a8a.js" crossorigin="anonymous"></script>
-    
+
     <link rel="stylesheet" href="./css/style.css">
     <!-- <link rel="stylesheet" href="./css/custom-select.css"> -->
     <title>Tienda BSALE</title>
 </head>
 
 
-    <nav class="navbar">
-        <div class="container navbar-content">
-            <h1>Tienda BSALE</h1>
-            <button class="btn-dark-mode">
-                <i class="far fa-moon"></i>
-                Dark Mode</button>
-        </div>
-    </nav>
-    <header class="container filter-content my-2">
-        <form class="form-search">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Buscar un producto">       
-        </form>
-        <div class="custom-select" style="width:200px">
-            <select>
-                <option value="">Selecciona una categoria</option>
-                <option value="bebica_energetica">Bebida energetica</option>
-                <option value="pisco">pisco</option>
-                <option value="ron">ron</option>
-                <option value="snack">snack</option>
-                <option value="bebida">bebida</option>
-                <option value="cerveza">cerveza</option>
-                <option value="vodka">vodka</option>
-            </select>
-            
-        </div>
-    </header>
-    
-    <main class="container grid">
-        <% if (data) { %>
-         <% for( let i = 0; i < data.length; i++ ) { %>
+<nav class="navbar">
+    <div class="container navbar-content">
+        <h1>Tienda BSALE</h1>
+        <button class="btn-dark-mode">
+            <i class="far fa-moon"></i>
+            Dark Mode</button>
+    </div>
+</nav>
+<header class="container filter-content my-2">
+    <form class="form-search">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar un producto">
+    </form>
+    <div class="custom-select" style="width:200px">
+        <select>
+            <option value="">Selecciona una categoria</option>
+            <option value="bebica_energetica">Bebida energetica</option>
+            <option value="pisco">pisco</option>
+            <option value="ron">ron</option>
+            <option value="snack">snack</option>
+            <option value="bebida">bebida</option>
+            <option value="cerveza">cerveza</option>
+            <option value="vodka">vodka</option>
+        </select>
+
+    </div>
+</header>
+
+<main class="container grid">
+    <% if (data) { %>
+        <% for( let i=0; i < data.length; i++ ) { %>
             <article class="card" id="products">
-                <img src=<%- data[i].url_image %>  alt="" class="img-fluid">
+                <img src=<%- data[i].url_image %> alt="" class="img-fluid">
                 <div class="card-content">
-                    <h3><%- data[i].name %> </h3>
+                    <h3>
+                        <%- data[i].name %>
+                    </h3>
                     <!-- <h3>Categoria: <%- data[i].category %></h3> -->
-                    <h3>$ <%- data[i].price %></h3>
+                    <h3>$ <%- data[i].price %>
+                    </h3>
                 </div>
             </article>
-         <% } %>
-        <% } %>
-         
-        
-                
-    </main>
+            <% } %>
+                <% } %>
+
+
+
+</main>
