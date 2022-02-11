@@ -37,4 +37,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Levantamiento del Servidor
 app.listen(PORT, (req, res) =>{
     console.log(`Servidor activo on port: ${PORT}`);
-})
+});
+
+module.exports = app;
