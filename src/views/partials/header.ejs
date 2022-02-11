@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7a47e06a8a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/materialize.css">
+    
     <link rel="stylesheet" href="./css/style.css">
     <!-- <link rel="stylesheet" href="./css/custom-select.css"> -->
     <title>Tienda BSALE</title>
 </head>
 
-<>
+
     <nav class="navbar">
         <div class="container navbar-content">
             <h1>Tienda BSALE</h1>
@@ -40,14 +40,21 @@
             
         </div>
     </header>
+    
     <main class="container grid">
-        <article class="card">
-            <img src="https://dojiw2m9tvv09.cloudfront.net/11132/product/misterbig3308256.jpg" alt="" class="img-fluid">
-            <div class="card-content">
-                <h3>Nombre:</h3>
-                <h3>Categoria:</h3>
-                <h3>Precio:</h3>
-            </div>
-        </article>
+        <% if (data) { %>
+         <% for( let i = 0; i < data.length; i++ ) { %>
+            <article class="card" id="products">
+                <img src=<%- data[i].url_image %>  alt="" class="img-fluid">
+                <div class="card-content">
+                    <h3><%- data[i].name %> </h3>
+                    <!-- <h3>Categoria: <%- data[i].category %></h3> -->
+                    <h3>$ <%- data[i].price %></h3>
+                </div>
+            </article>
+         <% } %>
+        <% } %>
+         
+        
                 
     </main>
