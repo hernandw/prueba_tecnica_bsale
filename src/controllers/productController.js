@@ -1,5 +1,5 @@
 exports.home = (req, res) => {
-    req.getConnection((err, conn) =>{
+    /* req.getConnection((err, conn) =>{
         conn.query('SELECT * FROM product', (err, products) => {
             if(err) {
                 res.json(err);
@@ -9,5 +9,6 @@ exports.home = (req, res) => {
                 data: products
             })
         })
-    })
+    }) */
+    res.render('products')
 } 
