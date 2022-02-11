@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7a47e06a8a.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- <link rel="stylesheet" href="./css/custom-select.css"> -->
     <title>Tienda BSALE</title>
 </head>
@@ -41,23 +41,3 @@
     </div>
 </header>
 
-<main class="container grid">
-    <% if (data) { %>
-        <% for( let i=0; i < data.length; i++ ) { %>
-            <article class="card" id="products">
-                <img src=<%- data[i].url_image %> alt="" class="img-fluid">
-                <div class="card-content">
-                    <h3>
-                        <%- data[i].name %>
-                    </h3>
-                    <!-- <h3>Categoria: <%- data[i].category %></h3> -->
-                    <h3>$ <%- data[i].price %>
-                    </h3>
-                </div>
-            </article>
-            <% } %>
-                <% } %>
-
-
-
-</main>

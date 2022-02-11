@@ -3,8 +3,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const morgan = require("morgan");
-const mysql = require("mysql");
-const myConnection = require("express-myconnection");
+const connection = require('./config/config')
 const customerRoutes = require("./routes/product");
 
 // Configuraciones
@@ -18,19 +17,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(morgan("dev")); // ver las consultas en la consola
 
 //Conexión a la BBDD
-app.use(
-  myConnection(
-    mysql,
-    {
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      PORT: 3306,
-      database: process.env.DB_DATABASE,
-    },
-    "single"
-  )
-);
 
 //Rutas del servidor
 app.use("/", customerRoutes);
@@ -39,8 +25,15 @@ app.use("/", customerRoutes);
 app.use(express.static(path.join(__dirname, "public")));
 
 //Levantamiento del Servidor
-app.listen(PORT, (req, res) => {
+app.listen(PORT, async(req, res) => {
   console.log(`Servidor activo on port: ${PORT}`);
+
+  // Check connect
+connection.connect(error => {
+  if (error) throw error;
+  console.log('Database server running!');
+});
+ 
 });
 
 module.exports = app;
