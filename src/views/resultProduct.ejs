@@ -1,6 +1,5 @@
-<%- include ('partials/header') %>
-
-
+<%- include ('partials/header') %> 
+    
     <main class="container grid">
         <% if (data) { %>
             <% for( let i=0; i < data.length; i++ ) { %>
@@ -13,13 +12,13 @@
                         <!-- <h3>Categoria: <%- data[i].category %></h3> -->
                         <h3>$ <%- data[i].price %>
                         </h3>
-                        <a href='/product/<%= data[i].id  %>'>Ver ficha</a>
                     </div>
                 </article>
                 <% } %>
                     <% } %>
-                    
+
+
+
     </main>
 
-
-    <%- include ('partials/footer') %>
+    <%- include ('partials/footer') %> 

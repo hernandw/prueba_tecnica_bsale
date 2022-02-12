@@ -74,19 +74,23 @@ box-shadow: var(--box-shadow);
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   background-color: var(--bg-secundary);
+  padding: 1rem;
 }
 
 .form-search i {
+  color: var(--text);
 opacity: 0.5;
 }
 
-.form-search input {
+.form-search input{
   border: none;
   outline: none;
   margin-left: 1rem;
   background-color: var(--bg-secundary);
   color: var(--text);
 }
+
+
 
 /* CARD */
 .grid {
@@ -140,6 +144,7 @@ opacity: 0.5;
   }
 
   .form-search input {
+    margin-bottom: 1rem;
     width: 85%;
   }
 
