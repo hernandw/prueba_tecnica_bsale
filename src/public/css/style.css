@@ -55,6 +55,8 @@ box-shadow: var(--box-shadow);
  align-items: center;
 }
 
+
+
 .btn-dark-mode {
   background-color: var(--bg-secundary);
   color: var(--text);
@@ -103,6 +105,7 @@ opacity: 0.5;
   background-color: var(--bg-secundary);
   border-radius: 0.35rem;
   box-shadow: var(--box-shadow);
+  padding: 15px;
 
 }
 

@@ -4,7 +4,7 @@
         <% if (data) { %>
             <% for( let i=0; i < data.length; i++ ) { %>
                 <article class="card" id="products">
-                    <img src=<%- data[i].url_image %> class="img-fluid">
+                    <img class="img-fluid" src=<%- data[i].url_image %> >
                     <div class="card-content">
                         <h3>
                             <%- data[i].name %>

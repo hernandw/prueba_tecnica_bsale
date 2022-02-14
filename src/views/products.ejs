@@ -1,25 +1,13 @@
 <%- include ('partials/header') %>
 
 
-    <main class="container grid">
-        <% if (data) { %>
-            <% for( let i=0; i < data.length; i++ ) { %>
-                <article class="card" id="products">
-                    <img src=<%- data[i].url_image %> class="img-fluid">
-                    <div class="card-content">
-                        <h3>
-                            <%- data[i].name %>
-                        </h3>
-                        <!-- <h3>Categoria: <%- data[i].category %></h3> -->
-                        <h3>$ <%- data[i].price %>
-                        </h3>
-                        <a href='/product/<%= data[i].id  %>'>Ver ficha</a>
-                    </div>
-                </article>
-                <% } %>
-                    <% } %>
+
+    <main class="container">
+        
+       <div id="productos" class="grid"></div>
+
                     
     </main>
-
-
+    
+    
     <%- include ('partials/footer') %>
